@@ -1,0 +1,2520 @@
+
+OLEDRGBFirst.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00802800  00802800  00000bbd  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000aea  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .rodata       0000003f  00004aea  00000aea  00000b7e  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .bss          0000000a  00802800  00802800  00000bbd  2**0
+                  ALLOC
+  4 .comment      00000030  00000000  00000000  00000bbd  2**0
+                  CONTENTS, READONLY
+  5 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000bf0  2**2
+                  CONTENTS, READONLY
+  6 .debug_aranges 00000090  00000000  00000000  00000c30  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   000058be  00000000  00000000  00000cc0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 00002b23  00000000  00000000  0000657e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   0000107e  00000000  00000000  000090a1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000244  00000000  00000000  0000a120  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    000019f6  00000000  00000000  0000a364  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    000020ab  00000000  00000000  0000bd5a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 00000100  00000000  00000000  0000de05  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__ctors_end>
+   4:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+   8:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+   c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  10:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  14:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  18:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  1c:	0c 94 80 00 	jmp	0x100	; 0x100 <__vector_7>
+  20:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  24:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  28:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  2c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  30:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  34:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  38:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  3c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  40:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  44:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  48:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  4c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  50:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  54:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  58:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  5c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  60:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  64:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  68:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  6c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  70:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  74:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  78:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  7c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  80:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  84:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  88:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  8c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  90:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  94:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  98:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  9c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+
+000000a0 <__ctors_end>:
+  a0:	11 24       	eor	r1, r1
+  a2:	1f be       	out	0x3f, r1	; 63
+  a4:	cf ef       	ldi	r28, 0xFF	; 255
+  a6:	cd bf       	out	0x3d, r28	; 61
+  a8:	df e3       	ldi	r29, 0x3F	; 63
+  aa:	de bf       	out	0x3e, r29	; 62
+
+000000ac <__do_copy_data>:
+  ac:	18 e2       	ldi	r17, 0x28	; 40
+  ae:	a0 e0       	ldi	r26, 0x00	; 0
+  b0:	b8 e2       	ldi	r27, 0x28	; 40
+  b2:	e9 e2       	ldi	r30, 0x29	; 41
+  b4:	fb e0       	ldi	r31, 0x0B	; 11
+  b6:	02 c0       	rjmp	.+4      	; 0xbc <__do_copy_data+0x10>
+  b8:	05 90       	lpm	r0, Z+
+  ba:	0d 92       	st	X+, r0
+  bc:	a0 30       	cpi	r26, 0x00	; 0
+  be:	b1 07       	cpc	r27, r17
+  c0:	d9 f7       	brne	.-10     	; 0xb8 <__do_copy_data+0xc>
+
+000000c2 <__do_clear_bss>:
+  c2:	28 e2       	ldi	r18, 0x28	; 40
+  c4:	a0 e0       	ldi	r26, 0x00	; 0
+  c6:	b8 e2       	ldi	r27, 0x28	; 40
+  c8:	01 c0       	rjmp	.+2      	; 0xcc <.do_clear_bss_start>
+
+000000ca <.do_clear_bss_loop>:
+  ca:	1d 92       	st	X+, r1
+
+000000cc <.do_clear_bss_start>:
+  cc:	aa 30       	cpi	r26, 0x0A	; 10
+  ce:	b2 07       	cpc	r27, r18
+  d0:	e1 f7       	brne	.-8      	; 0xca <.do_clear_bss_loop>
+  d2:	0e 94 f3 00 	call	0x1e6	; 0x1e6 <main>
+  d6:	0c 94 73 05 	jmp	0xae6	; 0xae6 <_exit>
+
+000000da <__bad_interrupt>:
+  da:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000de <OLED_Interface_Init>:
+extern const __flash uint8_t* const __flash system12_array[];
+extern const __flash uint8_t* const __flash system8_array[];
+
+void OLED_Interface_Init()
+{
+	OLED_PORT.OUT=OLEDPIN_CS | OLEDPIN_DC | OLEDPIN_RESET;  //Deaktywujemy kontroler i inne urz¹dzenia na magistrali SPI
+  de:	e0 e2       	ldi	r30, 0x20	; 32
+  e0:	f4 e0       	ldi	r31, 0x04	; 4
+  e2:	88 e3       	ldi	r24, 0x38	; 56
+  e4:	84 83       	std	Z+4, r24	; 0x04
+	OLED_PORT.DIR=OLEDPIN_CS | OLEDPIN_DC | OLEDPIN_RESET | OLEDPIN_SCK | OLEDPIN_MOSI; //Ustaw odpowiednie piny jako wyjœcia
+  e6:	8d e3       	ldi	r24, 0x3D	; 61
+  e8:	80 83       	st	Z, r24
+
+	OLED_USART.BAUD=2<<6;	                    //FSCK=FCPU/4 - maksymalne taktowanie SPI 5 MHz
+  ea:	e0 e6       	ldi	r30, 0x60	; 96
+  ec:	f8 e0       	ldi	r31, 0x08	; 8
+  ee:	80 e8       	ldi	r24, 0x80	; 128
+  f0:	90 e0       	ldi	r25, 0x00	; 0
+  f2:	80 87       	std	Z+8, r24	; 0x08
+  f4:	91 87       	std	Z+9, r25	; 0x09
+	OLED_USART.CTRLC=USART_CMODE_MSPI_gc;       //Tryb SPI 0
+  f6:	80 ec       	ldi	r24, 0xC0	; 192
+  f8:	87 83       	std	Z+7, r24	; 0x07
+	OLED_USART.CTRLB=USART_TXEN_bm;				//MISO zbêdne bo nie ma na module
+  fa:	80 e4       	ldi	r24, 0x40	; 64
+  fc:	86 83       	std	Z+6, r24	; 0x06
+  fe:	08 95       	ret
+
+00000100 <__vector_7>:
+}
+
+volatile uint8_t Buttons;         //Stan przycisków - 1 wciœniêty, 0 - zwolniony
+
+ISR(TCA0_OVF_vect)
+{
+ 100:	1f 92       	push	r1
+ 102:	0f 92       	push	r0
+ 104:	0f b6       	in	r0, 0x3f	; 63
+ 106:	0f 92       	push	r0
+ 108:	11 24       	eor	r1, r1
+ 10a:	2f 93       	push	r18
+ 10c:	3f 93       	push	r19
+ 10e:	4f 93       	push	r20
+ 110:	5f 93       	push	r21
+ 112:	6f 93       	push	r22
+ 114:	8f 93       	push	r24
+ 116:	9f 93       	push	r25
+ 118:	ef 93       	push	r30
+ 11a:	ff 93       	push	r31
+	TCA0.SINGLE.INTFLAGS = TCA_SINGLE_OVF_bm;		//Flaga nie jest kasowana automatycznie
+ 11c:	81 e0       	ldi	r24, 0x01	; 1
+ 11e:	80 93 0b 0a 	sts	0x0A0B, r24	; 0x800a0b <__TEXT_REGION_LENGTH__+0x7f4a0b>
+	static uint8_t counters[3];						//Pomocnicze liczniki dla SW0, SW1 i SW2
+
+	uint8_t tmpbtn=0;
+	tmpbtn=((PORTF_IN & PIN4_bm) == 0);
+ 122:	e8 ea       	ldi	r30, 0xA8	; 168
+ 124:	f4 e0       	ldi	r31, 0x04	; 4
+ 126:	90 81       	ld	r25, Z
+ 128:	92 95       	swap	r25
+ 12a:	9f 70       	andi	r25, 0x0F	; 15
+ 12c:	89 27       	eor	r24, r25
+ 12e:	81 70       	andi	r24, 0x01	; 1
+	tmpbtn|=(((PORTF_IN & PIN5_bm) == 0) << 1);
+ 130:	90 81       	ld	r25, Z
+ 132:	95 fd       	sbrc	r25, 5
+ 134:	02 c0       	rjmp	.+4      	; 0x13a <__vector_7+0x3a>
+ 136:	52 e0       	ldi	r21, 0x02	; 2
+ 138:	01 c0       	rjmp	.+2      	; 0x13c <__vector_7+0x3c>
+ 13a:	50 e0       	ldi	r21, 0x00	; 0
+ 13c:	85 2b       	or	r24, r21
+	tmpbtn|=(((PORTF_IN & PIN6_bm) == 0) << 2);
+ 13e:	90 91 a8 04 	lds	r25, 0x04A8	; 0x8004a8 <__TEXT_REGION_LENGTH__+0x7f44a8>
+ 142:	96 fd       	sbrc	r25, 6
+ 144:	02 c0       	rjmp	.+4      	; 0x14a <__vector_7+0x4a>
+ 146:	94 e0       	ldi	r25, 0x04	; 4
+ 148:	01 c0       	rjmp	.+2      	; 0x14c <__vector_7+0x4c>
+ 14a:	90 e0       	ldi	r25, 0x00	; 0
+ 14c:	58 2f       	mov	r21, r24
+ 14e:	59 2b       	or	r21, r25
+
+	uint8_t btnmask=1;
+	for(uint8_t i = 0; i < sizeof(counters)/sizeof(counters[0]); i++)
+ 150:	80 e0       	ldi	r24, 0x00	; 0
+	uint8_t tmpbtn=0;
+	tmpbtn=((PORTF_IN & PIN4_bm) == 0);
+	tmpbtn|=(((PORTF_IN & PIN5_bm) == 0) << 1);
+	tmpbtn|=(((PORTF_IN & PIN6_bm) == 0) << 2);
+
+	uint8_t btnmask=1;
+ 152:	41 e0       	ldi	r20, 0x01	; 1
+	for(uint8_t i = 0; i < sizeof(counters)/sizeof(counters[0]); i++)
+ 154:	24 c0       	rjmp	.+72     	; 0x19e <__vector_7+0x9e>
+	{
+		if(counters[i]==0)              //Nie eliminujemy aktualnie drgañ
+ 156:	28 2f       	mov	r18, r24
+ 158:	30 e0       	ldi	r19, 0x00	; 0
+ 15a:	f9 01       	movw	r30, r18
+ 15c:	e0 50       	subi	r30, 0x00	; 0
+ 15e:	f8 4d       	sbci	r31, 0xD8	; 216
+ 160:	90 81       	ld	r25, Z
+ 162:	91 11       	cpse	r25, r1
+ 164:	15 c0       	rjmp	.+42     	; 0x190 <__vector_7+0x90>
+		{
+			if((tmpbtn ^ Buttons) & btnmask)
+ 166:	90 91 03 28 	lds	r25, 0x2803	; 0x802803 <Buttons>
+ 16a:	95 27       	eor	r25, r21
+ 16c:	94 23       	and	r25, r20
+ 16e:	a9 f0       	breq	.+42     	; 0x19a <__vector_7+0x9a>
+			{
+				Buttons=(Buttons & (~btnmask)) | (tmpbtn & btnmask); //Przepisz stan klawisza
+ 170:	90 91 03 28 	lds	r25, 0x2803	; 0x802803 <Buttons>
+ 174:	64 2f       	mov	r22, r20
+ 176:	60 95       	com	r22
+ 178:	96 23       	and	r25, r22
+ 17a:	64 2f       	mov	r22, r20
+ 17c:	65 23       	and	r22, r21
+ 17e:	96 2b       	or	r25, r22
+ 180:	90 93 03 28 	sts	0x2803, r25	; 0x802803 <Buttons>
+				counters[i]=20;	//Czas przez jaki stan przycisku bêdzie ignorowany
+ 184:	f9 01       	movw	r30, r18
+ 186:	e0 50       	subi	r30, 0x00	; 0
+ 188:	f8 4d       	sbci	r31, 0xD8	; 216
+ 18a:	94 e1       	ldi	r25, 0x14	; 20
+ 18c:	90 83       	st	Z, r25
+ 18e:	05 c0       	rjmp	.+10     	; 0x19a <__vector_7+0x9a>
+			}
+		} else --counters[i];  //Zmniejszaj licznik do 0
+ 190:	f9 01       	movw	r30, r18
+ 192:	e0 50       	subi	r30, 0x00	; 0
+ 194:	f8 4d       	sbci	r31, 0xD8	; 216
+ 196:	91 50       	subi	r25, 0x01	; 1
+ 198:	90 83       	st	Z, r25
+		btnmask<<=1;
+ 19a:	44 0f       	add	r20, r20
+	tmpbtn=((PORTF_IN & PIN4_bm) == 0);
+	tmpbtn|=(((PORTF_IN & PIN5_bm) == 0) << 1);
+	tmpbtn|=(((PORTF_IN & PIN6_bm) == 0) << 2);
+
+	uint8_t btnmask=1;
+	for(uint8_t i = 0; i < sizeof(counters)/sizeof(counters[0]); i++)
+ 19c:	8f 5f       	subi	r24, 0xFF	; 255
+ 19e:	83 30       	cpi	r24, 0x03	; 3
+ 1a0:	d0 f2       	brcs	.-76     	; 0x156 <__vector_7+0x56>
+				counters[i]=20;	//Czas przez jaki stan przycisku bêdzie ignorowany
+			}
+		} else --counters[i];  //Zmniejszaj licznik do 0
+		btnmask<<=1;
+	}
+}
+ 1a2:	ff 91       	pop	r31
+ 1a4:	ef 91       	pop	r30
+ 1a6:	9f 91       	pop	r25
+ 1a8:	8f 91       	pop	r24
+ 1aa:	6f 91       	pop	r22
+ 1ac:	5f 91       	pop	r21
+ 1ae:	4f 91       	pop	r20
+ 1b0:	3f 91       	pop	r19
+ 1b2:	2f 91       	pop	r18
+ 1b4:	0f 90       	pop	r0
+ 1b6:	0f be       	out	0x3f, r0	; 63
+ 1b8:	0f 90       	pop	r0
+ 1ba:	1f 90       	pop	r1
+ 1bc:	18 95       	reti
+
+000001be <Kbd_init>:
+
+void Kbd_init()
+{
+	PORTF_DIRCLR = PIN6_bm | PIN5_bm | PIN4_bm;       //W³aœciwie niepotrzebne, gdy¿ domyœlnie te piny s¹ wejœciem, przycisk SW0
+ 1be:	80 e7       	ldi	r24, 0x70	; 112
+ 1c0:	80 93 a2 04 	sts	0x04A2, r24	; 0x8004a2 <__TEXT_REGION_LENGTH__+0x7f44a2>
+	PORTF.PIN4CTRL = PORT_PULLUPEN_bm;		//Pull upy
+ 1c4:	e0 ea       	ldi	r30, 0xA0	; 160
+ 1c6:	f4 e0       	ldi	r31, 0x04	; 4
+ 1c8:	88 e0       	ldi	r24, 0x08	; 8
+ 1ca:	84 8b       	std	Z+20, r24	; 0x14
+	PORTF.PIN5CTRL = PORT_PULLUPEN_bm;		//Pull upy
+ 1cc:	85 8b       	std	Z+21, r24	; 0x15
+	PORTF.PIN6CTRL = PORT_PULLUPEN_bm;		//Pull upy
+ 1ce:	86 8b       	std	Z+22, r24	; 0x16
+	TCA0.SINGLE.CTRLB = TCA_SINGLE_WGMODE_NORMAL_gc;       //Zwyk³y tryb pracy timera
+ 1d0:	e0 e0       	ldi	r30, 0x00	; 0
+ 1d2:	fa e0       	ldi	r31, 0x0A	; 10
+ 1d4:	11 82       	std	Z+1, r1	; 0x01
+	TCA0.SINGLE.PER = (F_CPU/1000)-1;              //Sprawdzamy klawisze co oko³o 1 ms
+ 1d6:	8f e1       	ldi	r24, 0x1F	; 31
+ 1d8:	9e e4       	ldi	r25, 0x4E	; 78
+ 1da:	86 a3       	std	Z+38, r24	; 0x26
+ 1dc:	97 a3       	std	Z+39, r25	; 0x27
+	TCA0.SINGLE.INTCTRL = TCA_SINGLE_OVF_bm;		//Przerwanie nadmiaru
+ 1de:	81 e0       	ldi	r24, 0x01	; 1
+ 1e0:	82 87       	std	Z+10, r24	; 0x0a
+	TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV1_gc | TCA_SINGLE_ENABLE_bm;
+ 1e2:	80 83       	st	Z, r24
+ 1e4:	08 95       	ret
+
+000001e6 <main>:
+}
+
+int main(void)
+{
+ 1e6:	cf 93       	push	r28
+ 1e8:	df 93       	push	r29
+ 1ea:	cd b7       	in	r28, 0x3d	; 61
+ 1ec:	de b7       	in	r29, 0x3e	; 62
+ 1ee:	ef 97       	sbiw	r28, 0x3f	; 63
+ 1f0:	cd bf       	out	0x3d, r28	; 61
+ 1f2:	de bf       	out	0x3e, r29	; 62
+	static uint8_t OldButtons;  //Poprzedni stan klawiszy
+	CCP=CCP_IOREG_gc;			//Odblokuj dostêp do rejestru
+ 1f4:	88 ed       	ldi	r24, 0xD8	; 216
+ 1f6:	84 bf       	out	0x34, r24	; 52
+	CLKCTRL.MCLKCTRLB = 0;		//Disable PEN, CLK = 20 MHz
+ 1f8:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__TEXT_REGION_LENGTH__+0x7f4061>
+	OLED_Interface_Init();
+ 1fc:	0e 94 6f 00 	call	0xde	; 0xde <OLED_Interface_Init>
+	OLED_Init();
+ 200:	0e 94 e1 01 	call	0x3c2	; 0x3c2 <OLED_Init>
+  
+	Kbd_init();              //Obs³uga przycisków
+ 204:	0e 94 df 00 	call	0x1be	; 0x1be <Kbd_init>
+
+	sei();					 //W³¹czamy przerwania
+ 208:	78 94       	sei
+	 
+	 
+	OLED_Clear(0x0000);
+ 20a:	80 e0       	ldi	r24, 0x00	; 0
+ 20c:	90 e0       	ldi	r25, 0x00	; 0
+ 20e:	0e 94 ab 04 	call	0x956	; 0x956 <OLED_Clear>
+	OLED_FgColor = 0b1111111111100000;
+ 212:	80 ee       	ldi	r24, 0xE0	; 224
+ 214:	9f ef       	ldi	r25, 0xFF	; 255
+ 216:	80 93 04 28 	sts	0x2804, r24	; 0x802804 <OLED_FgColor>
+ 21a:	90 93 05 28 	sts	0x2805, r25	; 0x802805 <OLED_FgColor+0x1>
+	OLED_BgColor = 0;//0b0000000000011111;
+ 21e:	10 92 06 28 	sts	0x2806, r1	; 0x802806 <OLED_BgColor>
+ 222:	10 92 07 28 	sts	0x2807, r1	; 0x802807 <OLED_BgColor+0x1>
+		_delay_ms(1000);
+		OLED_Clear(0b0000000000011111);
+		_delay_ms(1000);
+	}*/
+
+	for(uint8_t i = 0; i < OLED_WIDTH; i++)
+ 226:	10 e0       	ldi	r17, 0x00	; 0
+ 228:	27 c0       	rjmp	.+78     	; 0x278 <main+0x92>
+		for(uint8_t y = 0; y < 16; y++)
+			{
+				OLED_SetPixel(i, y + 0, (OLED_RGB565){.red = (i % 32), .green = 0, .blue = 0}.word);
+ 22a:	21 2f       	mov	r18, r17
+ 22c:	2f 71       	andi	r18, 0x1F	; 31
+ 22e:	f2 2e       	mov	r15, r18
+ 230:	52 2f       	mov	r21, r18
+ 232:	55 0f       	add	r21, r21
+ 234:	55 0f       	add	r21, r21
+ 236:	55 0f       	add	r21, r21
+ 238:	40 e0       	ldi	r20, 0x00	; 0
+ 23a:	60 2f       	mov	r22, r16
+ 23c:	81 2f       	mov	r24, r17
+ 23e:	0e 94 fa 04 	call	0x9f4	; 0x9f4 <OLED_SetPixel>
+				OLED_SetPixel(i, y + 20, (OLED_RGB565){.red = 0, .green = (i % 64), .blue = 0}.word);
+ 242:	51 2f       	mov	r21, r17
+ 244:	56 95       	lsr	r21
+ 246:	56 95       	lsr	r21
+ 248:	56 95       	lsr	r21
+ 24a:	57 70       	andi	r21, 0x07	; 7
+ 24c:	64 e1       	ldi	r22, 0x14	; 20
+ 24e:	60 0f       	add	r22, r16
+ 250:	41 2f       	mov	r20, r17
+ 252:	42 95       	swap	r20
+ 254:	44 0f       	add	r20, r20
+ 256:	40 7e       	andi	r20, 0xE0	; 224
+ 258:	81 2f       	mov	r24, r17
+ 25a:	0e 94 fa 04 	call	0x9f4	; 0x9f4 <OLED_SetPixel>
+				OLED_SetPixel(i, y + 40, (OLED_RGB565){.red = 0, .green = 0, .blue = (i % 32)}.word);
+ 25e:	4f 2d       	mov	r20, r15
+ 260:	68 e2       	ldi	r22, 0x28	; 40
+ 262:	60 0f       	add	r22, r16
+ 264:	50 e0       	ldi	r21, 0x00	; 0
+ 266:	81 2f       	mov	r24, r17
+ 268:	0e 94 fa 04 	call	0x9f4	; 0x9f4 <OLED_SetPixel>
+		OLED_Clear(0b0000000000011111);
+		_delay_ms(1000);
+	}*/
+
+	for(uint8_t i = 0; i < OLED_WIDTH; i++)
+		for(uint8_t y = 0; y < 16; y++)
+ 26c:	0f 5f       	subi	r16, 0xFF	; 255
+ 26e:	01 c0       	rjmp	.+2      	; 0x272 <main+0x8c>
+ 270:	00 e0       	ldi	r16, 0x00	; 0
+ 272:	00 31       	cpi	r16, 0x10	; 16
+ 274:	d0 f2       	brcs	.-76     	; 0x22a <main+0x44>
+		_delay_ms(1000);
+		OLED_Clear(0b0000000000011111);
+		_delay_ms(1000);
+	}*/
+
+	for(uint8_t i = 0; i < OLED_WIDTH; i++)
+ 276:	1f 5f       	subi	r17, 0xFF	; 255
+ 278:	11 23       	and	r17, r17
+ 27a:	d4 f7       	brge	.-12     	; 0x270 <main+0x8a>
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 27c:	e0 e2       	ldi	r30, 0x20	; 32
+ 27e:	f4 e0       	ldi	r31, 0x04	; 4
+ 280:	88 e0       	ldi	r24, 0x08	; 8
+ 282:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 284:	80 e1       	ldi	r24, 0x10	; 16
+ 286:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 288:	80 ea       	ldi	r24, 0xA0	; 160
+ 28a:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 28e:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 292:	86 ff       	sbrs	r24, 6
+ 294:	fc cf       	rjmp	.-8      	; 0x28e <main+0xa8>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 296:	e0 e6       	ldi	r30, 0x60	; 96
+ 298:	f8 e0       	ldi	r31, 0x08	; 8
+ 29a:	80 e4       	ldi	r24, 0x40	; 64
+ 29c:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 29e:	80 e1       	ldi	r24, 0x10	; 16
+ 2a0:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 2a4:	84 ea       	ldi	r24, 0xA4	; 164
+ 2a6:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 2a8:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 2ac:	86 ff       	sbrs	r24, 6
+ 2ae:	fc cf       	rjmp	.-8      	; 0x2a8 <main+0xc2>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 2b0:	80 e4       	ldi	r24, 0x40	; 64
+ 2b2:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 2b6:	88 e0       	ldi	r24, 0x08	; 8
+ 2b8:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+				OLED_SetPixel(i, y + 0, (OLED_RGB565){.red = (i % 32), .green = 0, .blue = 0}.word);
+				OLED_SetPixel(i, y + 20, (OLED_RGB565){.red = 0, .green = (i % 64), .blue = 0}.word);
+				OLED_SetPixel(i, y + 40, (OLED_RGB565){.red = 0, .green = 0, .blue = (i % 32)}.word);
+			}
+	OLED_Send_CmdWithByte(SSD1351_CMD_SETREMAP, 0b10100100);	//Tryb 262k kolorów
+	for(uint8_t i = 0; i < OLED_WIDTH; i++)
+ 2bc:	10 e0       	ldi	r17, 0x00	; 0
+ 2be:	22 c0       	rjmp	.+68     	; 0x304 <main+0x11e>
+		for(uint8_t y = 0; y < 16; y++)
+			{
+				OLED_SetPixel18(i, y + 64, ((uint32_t)i));
+ 2c0:	c1 2e       	mov	r12, r17
+ 2c2:	d1 2c       	mov	r13, r1
+ 2c4:	e1 2c       	mov	r14, r1
+ 2c6:	f1 2c       	mov	r15, r1
+ 2c8:	60 e4       	ldi	r22, 0x40	; 64
+ 2ca:	60 0f       	add	r22, r16
+ 2cc:	a7 01       	movw	r20, r14
+ 2ce:	96 01       	movw	r18, r12
+ 2d0:	81 2f       	mov	r24, r17
+ 2d2:	0e 94 2e 05 	call	0xa5c	; 0xa5c <OLED_SetPixel18>
+				OLED_SetPixel18(i, y + 84, ((uint32_t)i) << 8);
+ 2d6:	5e 2d       	mov	r21, r14
+ 2d8:	4d 2d       	mov	r20, r13
+ 2da:	3c 2d       	mov	r19, r12
+ 2dc:	22 27       	eor	r18, r18
+ 2de:	64 e5       	ldi	r22, 0x54	; 84
+ 2e0:	60 0f       	add	r22, r16
+ 2e2:	81 2f       	mov	r24, r17
+ 2e4:	0e 94 2e 05 	call	0xa5c	; 0xa5c <OLED_SetPixel18>
+				OLED_SetPixel18(i, y + 104, ((uint32_t)i) << 16);
+ 2e8:	a6 01       	movw	r20, r12
+ 2ea:	33 27       	eor	r19, r19
+ 2ec:	22 27       	eor	r18, r18
+ 2ee:	68 e6       	ldi	r22, 0x68	; 104
+ 2f0:	60 0f       	add	r22, r16
+ 2f2:	81 2f       	mov	r24, r17
+ 2f4:	0e 94 2e 05 	call	0xa5c	; 0xa5c <OLED_SetPixel18>
+				OLED_SetPixel(i, y + 20, (OLED_RGB565){.red = 0, .green = (i % 64), .blue = 0}.word);
+				OLED_SetPixel(i, y + 40, (OLED_RGB565){.red = 0, .green = 0, .blue = (i % 32)}.word);
+			}
+	OLED_Send_CmdWithByte(SSD1351_CMD_SETREMAP, 0b10100100);	//Tryb 262k kolorów
+	for(uint8_t i = 0; i < OLED_WIDTH; i++)
+		for(uint8_t y = 0; y < 16; y++)
+ 2f8:	0f 5f       	subi	r16, 0xFF	; 255
+ 2fa:	01 c0       	rjmp	.+2      	; 0x2fe <main+0x118>
+ 2fc:	00 e0       	ldi	r16, 0x00	; 0
+ 2fe:	00 31       	cpi	r16, 0x10	; 16
+ 300:	f8 f2       	brcs	.-66     	; 0x2c0 <main+0xda>
+				OLED_SetPixel(i, y + 0, (OLED_RGB565){.red = (i % 32), .green = 0, .blue = 0}.word);
+				OLED_SetPixel(i, y + 20, (OLED_RGB565){.red = 0, .green = (i % 64), .blue = 0}.word);
+				OLED_SetPixel(i, y + 40, (OLED_RGB565){.red = 0, .green = 0, .blue = (i % 32)}.word);
+			}
+	OLED_Send_CmdWithByte(SSD1351_CMD_SETREMAP, 0b10100100);	//Tryb 262k kolorów
+	for(uint8_t i = 0; i < OLED_WIDTH; i++)
+ 302:	1f 5f       	subi	r17, 0xFF	; 255
+ 304:	11 23       	and	r17, r17
+ 306:	d4 f7       	brge	.-12     	; 0x2fc <main+0x116>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 308:	3a e2       	ldi	r19, 0x2A	; 42
+ 30a:	40 e5       	ldi	r20, 0x50	; 80
+ 30c:	8e ef       	ldi	r24, 0xFE	; 254
+ 30e:	90 e0       	ldi	r25, 0x00	; 0
+ 310:	31 50       	subi	r19, 0x01	; 1
+ 312:	40 40       	sbci	r20, 0x00	; 0
+ 314:	80 40       	sbci	r24, 0x00	; 0
+ 316:	90 40       	sbci	r25, 0x00	; 0
+ 318:	d9 f7       	brne	.-10     	; 0x310 <main+0x12a>
+ 31a:	00 00       	nop
+			}
+	
+	while(1)		//Korekcja gamma
+	{
+		_delay_ms(5000);
+		OLED_Send_CmdWithBytes(SSD1351_CMD_SETGRAY, 63, (uint8_t[63]){		//Zmieñ korekcjê gamma
+ 31c:	8f e3       	ldi	r24, 0x3F	; 63
+ 31e:	ea ee       	ldi	r30, 0xEA	; 234
+ 320:	fa e4       	ldi	r31, 0x4A	; 74
+ 322:	de 01       	movw	r26, r28
+ 324:	11 96       	adiw	r26, 0x01	; 1
+ 326:	01 90       	ld	r0, Z+
+ 328:	0d 92       	st	X+, r0
+ 32a:	8a 95       	dec	r24
+ 32c:	e1 f7       	brne	.-8      	; 0x326 <main+0x140>
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 32e:	e0 e2       	ldi	r30, 0x20	; 32
+ 330:	f4 e0       	ldi	r31, 0x04	; 4
+ 332:	88 e0       	ldi	r24, 0x08	; 8
+ 334:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 336:	80 e1       	ldi	r24, 0x10	; 16
+ 338:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 33a:	88 eb       	ldi	r24, 0xB8	; 184
+ 33c:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 340:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 344:	86 ff       	sbrs	r24, 6
+ 346:	fc cf       	rjmp	.-8      	; 0x340 <main+0x15a>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 348:	80 e4       	ldi	r24, 0x40	; 64
+ 34a:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 34e:	80 e1       	ldi	r24, 0x10	; 16
+ 350:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 354:	90 e0       	ldi	r25, 0x00	; 0
+ 356:	11 c0       	rjmp	.+34     	; 0x37a <main+0x194>
+		SPI_Write_Byte(data[i]);
+ 358:	e1 e0       	ldi	r30, 0x01	; 1
+ 35a:	f0 e0       	ldi	r31, 0x00	; 0
+ 35c:	ec 0f       	add	r30, r28
+ 35e:	fd 1f       	adc	r31, r29
+ 360:	e9 0f       	add	r30, r25
+ 362:	f1 1d       	adc	r31, r1
+ 364:	80 81       	ld	r24, Z
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 366:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 36a:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 36e:	86 ff       	sbrs	r24, 6
+ 370:	fc cf       	rjmp	.-8      	; 0x36a <main+0x184>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 372:	80 e4       	ldi	r24, 0x40	; 64
+ 374:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 378:	9f 5f       	subi	r25, 0xFF	; 255
+ 37a:	9f 33       	cpi	r25, 0x3F	; 63
+ 37c:	68 f3       	brcs	.-38     	; 0x358 <main+0x172>
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 37e:	e0 e2       	ldi	r30, 0x20	; 32
+ 380:	f4 e0       	ldi	r31, 0x04	; 4
+ 382:	88 e0       	ldi	r24, 0x08	; 8
+ 384:	85 83       	std	Z+5, r24	; 0x05
+ 386:	2a e2       	ldi	r18, 0x2A	; 42
+ 388:	30 e5       	ldi	r19, 0x50	; 80
+ 38a:	4e ef       	ldi	r20, 0xFE	; 254
+ 38c:	90 e0       	ldi	r25, 0x00	; 0
+ 38e:	21 50       	subi	r18, 0x01	; 1
+ 390:	30 40       	sbci	r19, 0x00	; 0
+ 392:	40 40       	sbci	r20, 0x00	; 0
+ 394:	90 40       	sbci	r25, 0x00	; 0
+ 396:	d9 f7       	brne	.-10     	; 0x38e <main+0x1a8>
+ 398:	00 00       	nop
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 39a:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 39c:	80 e1       	ldi	r24, 0x10	; 16
+ 39e:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 3a0:	89 eb       	ldi	r24, 0xB9	; 185
+ 3a2:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 3a6:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 3aa:	86 ff       	sbrs	r24, 6
+ 3ac:	fc cf       	rjmp	.-8      	; 0x3a6 <main+0x1c0>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 3ae:	80 e4       	ldi	r24, 0x40	; 64
+ 3b0:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 3b4:	e0 e2       	ldi	r30, 0x20	; 32
+ 3b6:	f4 e0       	ldi	r31, 0x04	; 4
+ 3b8:	80 e1       	ldi	r24, 0x10	; 16
+ 3ba:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 3bc:	88 e0       	ldi	r24, 0x08	; 8
+ 3be:	85 83       	std	Z+5, r24	; 0x05
+ 3c0:	a3 cf       	rjmp	.-186    	; 0x308 <main+0x122>
+
+000003c2 <OLED_Init>:
+
+uint8_t OLED_X, OLED_Y;
+uint16_t OLED_FgColor, OLED_BgColor;	//Kolor t³a i pierwszego planu
+
+void OLED_Init()
+{
+ 3c2:	cf 93       	push	r28
+ 3c4:	df 93       	push	r29
+ 3c6:	cd b7       	in	r28, 0x3d	; 61
+ 3c8:	de b7       	in	r29, 0x3e	; 62
+ 3ca:	29 97       	sbiw	r28, 0x09	; 9
+ 3cc:	cd bf       	out	0x3d, r28	; 61
+ 3ce:	de bf       	out	0x3e, r29	; 62
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+}
+
+static inline void OLED_RESET()
+{
+	OLED_PORT.OUTSET = OLEDPIN_RESET;
+ 3d0:	e0 e2       	ldi	r30, 0x20	; 32
+ 3d2:	f4 e0       	ldi	r31, 0x04	; 4
+ 3d4:	80 e2       	ldi	r24, 0x20	; 32
+ 3d6:	85 83       	std	Z+5, r24	; 0x05
+ 3d8:	a7 e8       	ldi	r26, 0x87	; 135
+ 3da:	b3 e1       	ldi	r27, 0x13	; 19
+ 3dc:	11 97       	sbiw	r26, 0x01	; 1
+ 3de:	f1 f7       	brne	.-4      	; 0x3dc <OLED_Init+0x1a>
+ 3e0:	00 c0       	rjmp	.+0      	; 0x3e2 <OLED_Init+0x20>
+ 3e2:	00 00       	nop
+	_delay_ms(1);
+	OLED_PORT.OUTCLR = OLEDPIN_RESET;
+ 3e4:	86 83       	std	Z+6, r24	; 0x06
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 3e6:	bd e0       	ldi	r27, 0x0D	; 13
+ 3e8:	ba 95       	dec	r27
+ 3ea:	f1 f7       	brne	.-4      	; 0x3e8 <OLED_Init+0x26>
+ 3ec:	00 00       	nop
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+	OLED_PORT.OUTSET = OLEDPIN_RESET;
+ 3ee:	85 83       	std	Z+5, r24	; 0x05
+ 3f0:	2d e0       	ldi	r18, 0x0D	; 13
+ 3f2:	2a 95       	dec	r18
+ 3f4:	f1 f7       	brne	.-4      	; 0x3f2 <OLED_Init+0x30>
+ 3f6:	00 00       	nop
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 3f8:	88 e0       	ldi	r24, 0x08	; 8
+ 3fa:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 3fc:	80 e1       	ldi	r24, 0x10	; 16
+ 3fe:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 400:	8e ea       	ldi	r24, 0xAE	; 174
+ 402:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 406:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 40a:	86 ff       	sbrs	r24, 6
+ 40c:	fc cf       	rjmp	.-8      	; 0x406 <__LOCK_REGION_LENGTH__+0x6>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 40e:	a0 e6       	ldi	r26, 0x60	; 96
+ 410:	b8 e0       	ldi	r27, 0x08	; 8
+ 412:	80 e4       	ldi	r24, 0x40	; 64
+ 414:	14 96       	adiw	r26, 0x04	; 4
+ 416:	8c 93       	st	X, r24
+ 418:	14 97       	sbiw	r26, 0x04	; 4
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 41a:	e0 e2       	ldi	r30, 0x20	; 32
+ 41c:	f4 e0       	ldi	r31, 0x04	; 4
+ 41e:	80 e1       	ldi	r24, 0x10	; 16
+ 420:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 422:	98 e0       	ldi	r25, 0x08	; 8
+ 424:	95 83       	std	Z+5, r25	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 426:	96 83       	std	Z+6, r25	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 428:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 42a:	83 eb       	ldi	r24, 0xB3	; 179
+ 42c:	12 96       	adiw	r26, 0x02	; 2
+ 42e:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 430:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 434:	86 ff       	sbrs	r24, 6
+ 436:	fc cf       	rjmp	.-8      	; 0x430 <__LOCK_REGION_LENGTH__+0x30>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 438:	e0 e6       	ldi	r30, 0x60	; 96
+ 43a:	f8 e0       	ldi	r31, 0x08	; 8
+ 43c:	80 e4       	ldi	r24, 0x40	; 64
+ 43e:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 440:	80 e1       	ldi	r24, 0x10	; 16
+ 442:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 446:	81 ef       	ldi	r24, 0xF1	; 241
+ 448:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 44a:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 44e:	86 ff       	sbrs	r24, 6
+ 450:	fc cf       	rjmp	.-8      	; 0x44a <__LOCK_REGION_LENGTH__+0x4a>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 452:	a0 e6       	ldi	r26, 0x60	; 96
+ 454:	b8 e0       	ldi	r27, 0x08	; 8
+ 456:	80 e4       	ldi	r24, 0x40	; 64
+ 458:	14 96       	adiw	r26, 0x04	; 4
+ 45a:	8c 93       	st	X, r24
+ 45c:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 45e:	e0 e2       	ldi	r30, 0x20	; 32
+ 460:	f4 e0       	ldi	r31, 0x04	; 4
+ 462:	88 e0       	ldi	r24, 0x08	; 8
+ 464:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 466:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 468:	80 e1       	ldi	r24, 0x10	; 16
+ 46a:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 46c:	8a ec       	ldi	r24, 0xCA	; 202
+ 46e:	12 96       	adiw	r26, 0x02	; 2
+ 470:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 472:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 476:	86 ff       	sbrs	r24, 6
+ 478:	fc cf       	rjmp	.-8      	; 0x472 <__LOCK_REGION_LENGTH__+0x72>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 47a:	e0 e6       	ldi	r30, 0x60	; 96
+ 47c:	f8 e0       	ldi	r31, 0x08	; 8
+ 47e:	80 e4       	ldi	r24, 0x40	; 64
+ 480:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 482:	80 e1       	ldi	r24, 0x10	; 16
+ 484:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 488:	8f e7       	ldi	r24, 0x7F	; 127
+ 48a:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 48c:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 490:	86 ff       	sbrs	r24, 6
+ 492:	fc cf       	rjmp	.-8      	; 0x48c <__LOCK_REGION_LENGTH__+0x8c>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 494:	a0 e6       	ldi	r26, 0x60	; 96
+ 496:	b8 e0       	ldi	r27, 0x08	; 8
+ 498:	80 e4       	ldi	r24, 0x40	; 64
+ 49a:	14 96       	adiw	r26, 0x04	; 4
+ 49c:	8c 93       	st	X, r24
+ 49e:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 4a0:	e0 e2       	ldi	r30, 0x20	; 32
+ 4a2:	f4 e0       	ldi	r31, 0x04	; 4
+ 4a4:	88 e0       	ldi	r24, 0x08	; 8
+ 4a6:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 4a8:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 4aa:	80 e1       	ldi	r24, 0x10	; 16
+ 4ac:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 4ae:	82 ea       	ldi	r24, 0xA2	; 162
+ 4b0:	12 96       	adiw	r26, 0x02	; 2
+ 4b2:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 4b4:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 4b8:	86 ff       	sbrs	r24, 6
+ 4ba:	fc cf       	rjmp	.-8      	; 0x4b4 <__LOCK_REGION_LENGTH__+0xb4>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 4bc:	e0 e6       	ldi	r30, 0x60	; 96
+ 4be:	f8 e0       	ldi	r31, 0x08	; 8
+ 4c0:	80 e4       	ldi	r24, 0x40	; 64
+ 4c2:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 4c4:	80 e1       	ldi	r24, 0x10	; 16
+ 4c6:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 4ca:	8f e5       	ldi	r24, 0x5F	; 95
+ 4cc:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 4ce:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 4d2:	86 ff       	sbrs	r24, 6
+ 4d4:	fc cf       	rjmp	.-8      	; 0x4ce <__LOCK_REGION_LENGTH__+0xce>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 4d6:	a0 e6       	ldi	r26, 0x60	; 96
+ 4d8:	b8 e0       	ldi	r27, 0x08	; 8
+ 4da:	80 e4       	ldi	r24, 0x40	; 64
+ 4dc:	14 96       	adiw	r26, 0x04	; 4
+ 4de:	8c 93       	st	X, r24
+ 4e0:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 4e2:	e0 e2       	ldi	r30, 0x20	; 32
+ 4e4:	f4 e0       	ldi	r31, 0x04	; 4
+ 4e6:	88 e0       	ldi	r24, 0x08	; 8
+ 4e8:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 4ea:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 4ec:	80 e1       	ldi	r24, 0x10	; 16
+ 4ee:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 4f0:	81 ea       	ldi	r24, 0xA1	; 161
+ 4f2:	12 96       	adiw	r26, 0x02	; 2
+ 4f4:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 4f6:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 4fa:	86 ff       	sbrs	r24, 6
+ 4fc:	fc cf       	rjmp	.-8      	; 0x4f6 <__LOCK_REGION_LENGTH__+0xf6>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 4fe:	e0 e6       	ldi	r30, 0x60	; 96
+ 500:	f8 e0       	ldi	r31, 0x08	; 8
+ 502:	80 e4       	ldi	r24, 0x40	; 64
+ 504:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 506:	80 e1       	ldi	r24, 0x10	; 16
+ 508:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 50c:	80 e2       	ldi	r24, 0x20	; 32
+ 50e:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 510:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 514:	86 ff       	sbrs	r24, 6
+ 516:	fc cf       	rjmp	.-8      	; 0x510 <__LOCK_REGION_LENGTH__+0x110>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 518:	a0 e6       	ldi	r26, 0x60	; 96
+ 51a:	b8 e0       	ldi	r27, 0x08	; 8
+ 51c:	80 e4       	ldi	r24, 0x40	; 64
+ 51e:	14 96       	adiw	r26, 0x04	; 4
+ 520:	8c 93       	st	X, r24
+ 522:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 524:	e0 e2       	ldi	r30, 0x20	; 32
+ 526:	f4 e0       	ldi	r31, 0x04	; 4
+ 528:	88 e0       	ldi	r24, 0x08	; 8
+ 52a:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 52c:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 52e:	80 e1       	ldi	r24, 0x10	; 16
+ 530:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 532:	85 eb       	ldi	r24, 0xB5	; 181
+ 534:	12 96       	adiw	r26, 0x02	; 2
+ 536:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 538:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 53c:	86 ff       	sbrs	r24, 6
+ 53e:	fc cf       	rjmp	.-8      	; 0x538 <__LOCK_REGION_LENGTH__+0x138>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 540:	e0 e6       	ldi	r30, 0x60	; 96
+ 542:	f8 e0       	ldi	r31, 0x08	; 8
+ 544:	80 e4       	ldi	r24, 0x40	; 64
+ 546:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 548:	80 e1       	ldi	r24, 0x10	; 16
+ 54a:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 54e:	12 82       	std	Z+2, r1	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 550:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 554:	86 ff       	sbrs	r24, 6
+ 556:	fc cf       	rjmp	.-8      	; 0x550 <__LOCK_REGION_LENGTH__+0x150>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 558:	a0 e6       	ldi	r26, 0x60	; 96
+ 55a:	b8 e0       	ldi	r27, 0x08	; 8
+ 55c:	80 e4       	ldi	r24, 0x40	; 64
+ 55e:	14 96       	adiw	r26, 0x04	; 4
+ 560:	8c 93       	st	X, r24
+ 562:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 564:	e0 e2       	ldi	r30, 0x20	; 32
+ 566:	f4 e0       	ldi	r31, 0x04	; 4
+ 568:	88 e0       	ldi	r24, 0x08	; 8
+ 56a:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 56c:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 56e:	80 e1       	ldi	r24, 0x10	; 16
+ 570:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 572:	80 ea       	ldi	r24, 0xA0	; 160
+ 574:	12 96       	adiw	r26, 0x02	; 2
+ 576:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 578:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 57c:	86 ff       	sbrs	r24, 6
+ 57e:	fc cf       	rjmp	.-8      	; 0x578 <__LOCK_REGION_LENGTH__+0x178>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 580:	e0 e6       	ldi	r30, 0x60	; 96
+ 582:	f8 e0       	ldi	r31, 0x08	; 8
+ 584:	80 e4       	ldi	r24, 0x40	; 64
+ 586:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 588:	80 e1       	ldi	r24, 0x10	; 16
+ 58a:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 58e:	84 e6       	ldi	r24, 0x64	; 100
+ 590:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 592:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 596:	86 ff       	sbrs	r24, 6
+ 598:	fc cf       	rjmp	.-8      	; 0x592 <__LOCK_REGION_LENGTH__+0x192>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 59a:	a0 e6       	ldi	r26, 0x60	; 96
+ 59c:	b8 e0       	ldi	r27, 0x08	; 8
+ 59e:	80 e4       	ldi	r24, 0x40	; 64
+ 5a0:	14 96       	adiw	r26, 0x04	; 4
+ 5a2:	8c 93       	st	X, r24
+ 5a4:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 5a6:	e0 e2       	ldi	r30, 0x20	; 32
+ 5a8:	f4 e0       	ldi	r31, 0x04	; 4
+ 5aa:	88 e0       	ldi	r24, 0x08	; 8
+ 5ac:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 5ae:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 5b0:	80 e1       	ldi	r24, 0x10	; 16
+ 5b2:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 5b4:	8b ea       	ldi	r24, 0xAB	; 171
+ 5b6:	12 96       	adiw	r26, 0x02	; 2
+ 5b8:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 5ba:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 5be:	86 ff       	sbrs	r24, 6
+ 5c0:	fc cf       	rjmp	.-8      	; 0x5ba <__LOCK_REGION_LENGTH__+0x1ba>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 5c2:	e0 e6       	ldi	r30, 0x60	; 96
+ 5c4:	f8 e0       	ldi	r31, 0x08	; 8
+ 5c6:	80 e4       	ldi	r24, 0x40	; 64
+ 5c8:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 5ca:	80 e1       	ldi	r24, 0x10	; 16
+ 5cc:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 5d0:	81 e0       	ldi	r24, 0x01	; 1
+ 5d2:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 5d4:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 5d8:	86 ff       	sbrs	r24, 6
+ 5da:	fc cf       	rjmp	.-8      	; 0x5d4 <__LOCK_REGION_LENGTH__+0x1d4>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 5dc:	a0 e6       	ldi	r26, 0x60	; 96
+ 5de:	b8 e0       	ldi	r27, 0x08	; 8
+ 5e0:	80 e4       	ldi	r24, 0x40	; 64
+ 5e2:	14 96       	adiw	r26, 0x04	; 4
+ 5e4:	8c 93       	st	X, r24
+ 5e6:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 5e8:	e0 e2       	ldi	r30, 0x20	; 32
+ 5ea:	f4 e0       	ldi	r31, 0x04	; 4
+ 5ec:	88 e0       	ldi	r24, 0x08	; 8
+ 5ee:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 5f0:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 5f2:	80 e1       	ldi	r24, 0x10	; 16
+ 5f4:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 5f6:	81 eb       	ldi	r24, 0xB1	; 177
+ 5f8:	12 96       	adiw	r26, 0x02	; 2
+ 5fa:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 5fc:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 600:	86 ff       	sbrs	r24, 6
+ 602:	fc cf       	rjmp	.-8      	; 0x5fc <__LOCK_REGION_LENGTH__+0x1fc>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 604:	e0 e6       	ldi	r30, 0x60	; 96
+ 606:	f8 e0       	ldi	r31, 0x08	; 8
+ 608:	80 e4       	ldi	r24, 0x40	; 64
+ 60a:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 60c:	80 e1       	ldi	r24, 0x10	; 16
+ 60e:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 612:	82 e3       	ldi	r24, 0x32	; 50
+ 614:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 616:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 61a:	86 ff       	sbrs	r24, 6
+ 61c:	fc cf       	rjmp	.-8      	; 0x616 <__LOCK_REGION_LENGTH__+0x216>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 61e:	a0 e6       	ldi	r26, 0x60	; 96
+ 620:	b8 e0       	ldi	r27, 0x08	; 8
+ 622:	80 e4       	ldi	r24, 0x40	; 64
+ 624:	14 96       	adiw	r26, 0x04	; 4
+ 626:	8c 93       	st	X, r24
+ 628:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 62a:	e0 e2       	ldi	r30, 0x20	; 32
+ 62c:	f4 e0       	ldi	r31, 0x04	; 4
+ 62e:	88 e0       	ldi	r24, 0x08	; 8
+ 630:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 632:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 634:	80 e1       	ldi	r24, 0x10	; 16
+ 636:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 638:	8e eb       	ldi	r24, 0xBE	; 190
+ 63a:	12 96       	adiw	r26, 0x02	; 2
+ 63c:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 63e:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 642:	86 ff       	sbrs	r24, 6
+ 644:	fc cf       	rjmp	.-8      	; 0x63e <__LOCK_REGION_LENGTH__+0x23e>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 646:	e0 e6       	ldi	r30, 0x60	; 96
+ 648:	f8 e0       	ldi	r31, 0x08	; 8
+ 64a:	80 e4       	ldi	r24, 0x40	; 64
+ 64c:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 64e:	80 e1       	ldi	r24, 0x10	; 16
+ 650:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 654:	85 e0       	ldi	r24, 0x05	; 5
+ 656:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 658:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 65c:	86 ff       	sbrs	r24, 6
+ 65e:	fc cf       	rjmp	.-8      	; 0x658 <__LOCK_REGION_LENGTH__+0x258>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 660:	a0 e6       	ldi	r26, 0x60	; 96
+ 662:	b8 e0       	ldi	r27, 0x08	; 8
+ 664:	80 e4       	ldi	r24, 0x40	; 64
+ 666:	14 96       	adiw	r26, 0x04	; 4
+ 668:	8c 93       	st	X, r24
+ 66a:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 66c:	e0 e2       	ldi	r30, 0x20	; 32
+ 66e:	f4 e0       	ldi	r31, 0x04	; 4
+ 670:	88 e0       	ldi	r24, 0x08	; 8
+ 672:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 674:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 676:	80 e1       	ldi	r24, 0x10	; 16
+ 678:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 67a:	86 ea       	ldi	r24, 0xA6	; 166
+ 67c:	12 96       	adiw	r26, 0x02	; 2
+ 67e:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 680:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 684:	86 ff       	sbrs	r24, 6
+ 686:	fc cf       	rjmp	.-8      	; 0x680 <__LOCK_REGION_LENGTH__+0x280>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 688:	a0 e6       	ldi	r26, 0x60	; 96
+ 68a:	b8 e0       	ldi	r27, 0x08	; 8
+ 68c:	80 e4       	ldi	r24, 0x40	; 64
+ 68e:	14 96       	adiw	r26, 0x04	; 4
+ 690:	8c 93       	st	X, r24
+ 692:	14 97       	sbiw	r26, 0x04	; 4
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 694:	e0 e2       	ldi	r30, 0x20	; 32
+ 696:	f4 e0       	ldi	r31, 0x04	; 4
+ 698:	80 e1       	ldi	r24, 0x10	; 16
+ 69a:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 69c:	98 e0       	ldi	r25, 0x08	; 8
+ 69e:	95 83       	std	Z+5, r25	; 0x05
+	OLED_Send_CmdWithByte(SSD1351_CMD_SETREMAP, 0b01100100);		//Bity 7-6 - tryb 262k kolorów,bit 3 == 1 - RGB zamiast BGR
+    OLED_Send_CmdWithByte(SSD1351_CMD_FUNCTIONSELECT, 0x01); // internal (diode drop)
+    OLED_Send_CmdWithByte(SSD1351_CMD_PRECHARGE, 0x32);
+    OLED_Send_CmdWithByte(SSD1351_CMD_VCOMH, 0x05);
+    OLED_Send_Cmd(SSD1351_CMD_NORMALDISPLAY);
+    OLED_Send_CmdWithBytes(SSD1351_CMD_CONTRASTABC, 3, (uint8_t[]) {0xC8, 0x80, 0xC0});
+ 6a0:	28 ec       	ldi	r18, 0xC8	; 200
+ 6a2:	2f 83       	std	Y+7, r18	; 0x07
+ 6a4:	20 e8       	ldi	r18, 0x80	; 128
+ 6a6:	28 87       	std	Y+8, r18	; 0x08
+ 6a8:	20 ec       	ldi	r18, 0xC0	; 192
+ 6aa:	29 87       	std	Y+9, r18	; 0x09
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 6ac:	96 83       	std	Z+6, r25	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 6ae:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 6b0:	81 ec       	ldi	r24, 0xC1	; 193
+ 6b2:	12 96       	adiw	r26, 0x02	; 2
+ 6b4:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 6b6:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 6ba:	86 ff       	sbrs	r24, 6
+ 6bc:	fc cf       	rjmp	.-8      	; 0x6b6 <__LOCK_REGION_LENGTH__+0x2b6>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 6be:	80 e4       	ldi	r24, 0x40	; 64
+ 6c0:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 6c4:	80 e1       	ldi	r24, 0x10	; 16
+ 6c6:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 6ca:	90 e0       	ldi	r25, 0x00	; 0
+ 6cc:	11 c0       	rjmp	.+34     	; 0x6f0 <__LOCK_REGION_LENGTH__+0x2f0>
+		SPI_Write_Byte(data[i]);
+ 6ce:	e7 e0       	ldi	r30, 0x07	; 7
+ 6d0:	f0 e0       	ldi	r31, 0x00	; 0
+ 6d2:	ec 0f       	add	r30, r28
+ 6d4:	fd 1f       	adc	r31, r29
+ 6d6:	e9 0f       	add	r30, r25
+ 6d8:	f1 1d       	adc	r31, r1
+ 6da:	80 81       	ld	r24, Z
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 6dc:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 6e0:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 6e4:	86 ff       	sbrs	r24, 6
+ 6e6:	fc cf       	rjmp	.-8      	; 0x6e0 <__LOCK_REGION_LENGTH__+0x2e0>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 6e8:	80 e4       	ldi	r24, 0x40	; 64
+ 6ea:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 6ee:	9f 5f       	subi	r25, 0xFF	; 255
+ 6f0:	93 30       	cpi	r25, 0x03	; 3
+ 6f2:	68 f3       	brcs	.-38     	; 0x6ce <__LOCK_REGION_LENGTH__+0x2ce>
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 6f4:	e0 e2       	ldi	r30, 0x20	; 32
+ 6f6:	f4 e0       	ldi	r31, 0x04	; 4
+ 6f8:	88 e0       	ldi	r24, 0x08	; 8
+ 6fa:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 6fc:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 6fe:	80 e1       	ldi	r24, 0x10	; 16
+ 700:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 702:	87 ec       	ldi	r24, 0xC7	; 199
+ 704:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 708:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 70c:	86 ff       	sbrs	r24, 6
+ 70e:	fc cf       	rjmp	.-8      	; 0x708 <__LOCK_REGION_LENGTH__+0x308>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 710:	e0 e6       	ldi	r30, 0x60	; 96
+ 712:	f8 e0       	ldi	r31, 0x08	; 8
+ 714:	80 e4       	ldi	r24, 0x40	; 64
+ 716:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 718:	80 e1       	ldi	r24, 0x10	; 16
+ 71a:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 71e:	8f e0       	ldi	r24, 0x0F	; 15
+ 720:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 722:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 726:	86 ff       	sbrs	r24, 6
+ 728:	fc cf       	rjmp	.-8      	; 0x722 <__LOCK_REGION_LENGTH__+0x322>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 72a:	a0 e6       	ldi	r26, 0x60	; 96
+ 72c:	b8 e0       	ldi	r27, 0x08	; 8
+ 72e:	80 e4       	ldi	r24, 0x40	; 64
+ 730:	14 96       	adiw	r26, 0x04	; 4
+ 732:	8c 93       	st	X, r24
+ 734:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 736:	e0 e2       	ldi	r30, 0x20	; 32
+ 738:	f4 e0       	ldi	r31, 0x04	; 4
+ 73a:	88 e0       	ldi	r24, 0x08	; 8
+ 73c:	85 83       	std	Z+5, r24	; 0x05
+    OLED_Send_CmdWithByte(SSD1351_CMD_CONTRASTMASTER, 0x0F);
+    OLED_Send_CmdWithBytes(SSD1351_CMD_SETVSL, 3, (uint8_t[]) {0xA0, 0xB5, 0x55});
+ 73e:	90 ea       	ldi	r25, 0xA0	; 160
+ 740:	9c 83       	std	Y+4, r25	; 0x04
+ 742:	95 eb       	ldi	r25, 0xB5	; 181
+ 744:	9d 83       	std	Y+5, r25	; 0x05
+ 746:	95 e5       	ldi	r25, 0x55	; 85
+ 748:	9e 83       	std	Y+6, r25	; 0x06
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 74a:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 74c:	80 e1       	ldi	r24, 0x10	; 16
+ 74e:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 750:	84 eb       	ldi	r24, 0xB4	; 180
+ 752:	12 96       	adiw	r26, 0x02	; 2
+ 754:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 756:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 75a:	86 ff       	sbrs	r24, 6
+ 75c:	fc cf       	rjmp	.-8      	; 0x756 <__LOCK_REGION_LENGTH__+0x356>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 75e:	80 e4       	ldi	r24, 0x40	; 64
+ 760:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 764:	80 e1       	ldi	r24, 0x10	; 16
+ 766:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 76a:	90 e0       	ldi	r25, 0x00	; 0
+ 76c:	11 c0       	rjmp	.+34     	; 0x790 <__LOCK_REGION_LENGTH__+0x390>
+		SPI_Write_Byte(data[i]);
+ 76e:	e4 e0       	ldi	r30, 0x04	; 4
+ 770:	f0 e0       	ldi	r31, 0x00	; 0
+ 772:	ec 0f       	add	r30, r28
+ 774:	fd 1f       	adc	r31, r29
+ 776:	e9 0f       	add	r30, r25
+ 778:	f1 1d       	adc	r31, r1
+ 77a:	80 81       	ld	r24, Z
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 77c:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 780:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 784:	86 ff       	sbrs	r24, 6
+ 786:	fc cf       	rjmp	.-8      	; 0x780 <__LOCK_REGION_LENGTH__+0x380>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 788:	80 e4       	ldi	r24, 0x40	; 64
+ 78a:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 78e:	9f 5f       	subi	r25, 0xFF	; 255
+ 790:	93 30       	cpi	r25, 0x03	; 3
+ 792:	68 f3       	brcs	.-38     	; 0x76e <__LOCK_REGION_LENGTH__+0x36e>
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 794:	e0 e2       	ldi	r30, 0x20	; 32
+ 796:	f4 e0       	ldi	r31, 0x04	; 4
+ 798:	88 e0       	ldi	r24, 0x08	; 8
+ 79a:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 79c:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 79e:	80 e1       	ldi	r24, 0x10	; 16
+ 7a0:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 7a2:	86 eb       	ldi	r24, 0xB6	; 182
+ 7a4:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 7a8:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 7ac:	86 ff       	sbrs	r24, 6
+ 7ae:	fc cf       	rjmp	.-8      	; 0x7a8 <__LOCK_REGION_LENGTH__+0x3a8>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 7b0:	e0 e6       	ldi	r30, 0x60	; 96
+ 7b2:	f8 e0       	ldi	r31, 0x08	; 8
+ 7b4:	80 e4       	ldi	r24, 0x40	; 64
+ 7b6:	84 83       	std	Z+4, r24	; 0x04
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 7b8:	80 e1       	ldi	r24, 0x10	; 16
+ 7ba:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 7be:	81 e0       	ldi	r24, 0x01	; 1
+ 7c0:	82 83       	std	Z+2, r24	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 7c2:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 7c6:	86 ff       	sbrs	r24, 6
+ 7c8:	fc cf       	rjmp	.-8      	; 0x7c2 <__LOCK_REGION_LENGTH__+0x3c2>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 7ca:	a0 e6       	ldi	r26, 0x60	; 96
+ 7cc:	b8 e0       	ldi	r27, 0x08	; 8
+ 7ce:	80 e4       	ldi	r24, 0x40	; 64
+ 7d0:	14 96       	adiw	r26, 0x04	; 4
+ 7d2:	8c 93       	st	X, r24
+ 7d4:	14 97       	sbiw	r26, 0x04	; 4
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 7d6:	e0 e2       	ldi	r30, 0x20	; 32
+ 7d8:	f4 e0       	ldi	r31, 0x04	; 4
+ 7da:	88 e0       	ldi	r24, 0x08	; 8
+ 7dc:	85 83       	std	Z+5, r24	; 0x05
+    OLED_Send_CmdWithByte(SSD1351_CMD_PRECHARGE2, 0x01);
+	OLED_Send_CmdWithBytes(SSD1351_CMD_DISPLAYENHANCE, 3, (uint8_t[]) {0xA4, 0x00, 0x00});	//??
+ 7de:	94 ea       	ldi	r25, 0xA4	; 164
+ 7e0:	99 83       	std	Y+1, r25	; 0x01
+ 7e2:	1a 82       	std	Y+2, r1	; 0x02
+ 7e4:	1b 82       	std	Y+3, r1	; 0x03
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 7e6:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 7e8:	80 e1       	ldi	r24, 0x10	; 16
+ 7ea:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 7ec:	82 eb       	ldi	r24, 0xB2	; 178
+ 7ee:	12 96       	adiw	r26, 0x02	; 2
+ 7f0:	8c 93       	st	X, r24
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 7f2:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 7f6:	86 ff       	sbrs	r24, 6
+ 7f8:	fc cf       	rjmp	.-8      	; 0x7f2 <__LOCK_REGION_LENGTH__+0x3f2>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 7fa:	80 e4       	ldi	r24, 0x40	; 64
+ 7fc:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 800:	80 e1       	ldi	r24, 0x10	; 16
+ 802:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 806:	90 e0       	ldi	r25, 0x00	; 0
+ 808:	11 c0       	rjmp	.+34     	; 0x82c <__LOCK_REGION_LENGTH__+0x42c>
+		SPI_Write_Byte(data[i]);
+ 80a:	e1 e0       	ldi	r30, 0x01	; 1
+ 80c:	f0 e0       	ldi	r31, 0x00	; 0
+ 80e:	ec 0f       	add	r30, r28
+ 810:	fd 1f       	adc	r31, r29
+ 812:	e9 0f       	add	r30, r25
+ 814:	f1 1d       	adc	r31, r1
+ 816:	80 81       	ld	r24, Z
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 818:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 81c:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 820:	86 ff       	sbrs	r24, 6
+ 822:	fc cf       	rjmp	.-8      	; 0x81c <__LOCK_REGION_LENGTH__+0x41c>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 824:	80 e4       	ldi	r24, 0x40	; 64
+ 826:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 82a:	9f 5f       	subi	r25, 0xFF	; 255
+ 82c:	93 30       	cpi	r25, 0x03	; 3
+ 82e:	68 f3       	brcs	.-38     	; 0x80a <__LOCK_REGION_LENGTH__+0x40a>
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 830:	e0 e2       	ldi	r30, 0x20	; 32
+ 832:	f4 e0       	ldi	r31, 0x04	; 4
+ 834:	88 e0       	ldi	r24, 0x08	; 8
+ 836:	85 83       	std	Z+5, r24	; 0x05
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 838:	3f e7       	ldi	r19, 0x7F	; 127
+ 83a:	9a e1       	ldi	r25, 0x1A	; 26
+ 83c:	a6 e0       	ldi	r26, 0x06	; 6
+ 83e:	31 50       	subi	r19, 0x01	; 1
+ 840:	90 40       	sbci	r25, 0x00	; 0
+ 842:	a0 40       	sbci	r26, 0x00	; 0
+ 844:	e1 f7       	brne	.-8      	; 0x83e <__LOCK_REGION_LENGTH__+0x43e>
+ 846:	00 c0       	rjmp	.+0      	; 0x848 <__LOCK_REGION_LENGTH__+0x448>
+ 848:	00 00       	nop
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 84a:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 84c:	80 e1       	ldi	r24, 0x10	; 16
+ 84e:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 850:	8f ea       	ldi	r24, 0xAF	; 175
+ 852:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 856:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 85a:	86 ff       	sbrs	r24, 6
+ 85c:	fc cf       	rjmp	.-8      	; 0x856 <__LOCK_REGION_LENGTH__+0x456>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 85e:	80 e4       	ldi	r24, 0x40	; 64
+ 860:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 864:	e0 e2       	ldi	r30, 0x20	; 32
+ 866:	f4 e0       	ldi	r31, 0x04	; 4
+ 868:	80 e1       	ldi	r24, 0x10	; 16
+ 86a:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 86c:	88 e0       	ldi	r24, 0x08	; 8
+ 86e:	85 83       	std	Z+5, r24	; 0x05
+ 870:	bf e7       	ldi	r27, 0x7F	; 127
+ 872:	2f e4       	ldi	r18, 0x4F	; 79
+ 874:	32 e1       	ldi	r19, 0x12	; 18
+ 876:	b1 50       	subi	r27, 0x01	; 1
+ 878:	20 40       	sbci	r18, 0x00	; 0
+ 87a:	30 40       	sbci	r19, 0x00	; 0
+ 87c:	e1 f7       	brne	.-8      	; 0x876 <__LOCK_REGION_LENGTH__+0x476>
+ 87e:	00 c0       	rjmp	.+0      	; 0x880 <__LOCK_REGION_LENGTH__+0x480>
+ 880:	00 00       	nop
+    
+	_delay_ms(100);
+	OLED_Send_Cmd(SSD1351_CMD_DISPLAYON);
+	_delay_ms(300);
+}
+ 882:	29 96       	adiw	r28, 0x09	; 9
+ 884:	cd bf       	out	0x3d, r28	; 61
+ 886:	de bf       	out	0x3e, r29	; 62
+ 888:	df 91       	pop	r29
+ 88a:	cf 91       	pop	r28
+ 88c:	08 95       	ret
+
+0000088e <OLED_SetWindow>:
+
+void OLED_SetWindow(uint8_t xs, uint8_t ys, uint8_t xe, uint8_t ye)
+{
+ 88e:	cf 93       	push	r28
+ 890:	df 93       	push	r29
+ 892:	00 d0       	rcall	.+0      	; 0x894 <OLED_SetWindow+0x6>
+ 894:	00 d0       	rcall	.+0      	; 0x896 <OLED_SetWindow+0x8>
+ 896:	cd b7       	in	r28, 0x3d	; 61
+ 898:	de b7       	in	r29, 0x3e	; 62
+	OLED_Send_CmdWithBytes(SSD1351_CMD_SETCOLUMN, 2, (uint8_t[]) {xs, xe});
+ 89a:	8b 83       	std	Y+3, r24	; 0x03
+ 89c:	4c 83       	std	Y+4, r20	; 0x04
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 89e:	e0 e2       	ldi	r30, 0x20	; 32
+ 8a0:	f4 e0       	ldi	r31, 0x04	; 4
+ 8a2:	88 e0       	ldi	r24, 0x08	; 8
+ 8a4:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 8a6:	80 e1       	ldi	r24, 0x10	; 16
+ 8a8:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 8aa:	85 e1       	ldi	r24, 0x15	; 21
+ 8ac:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 8b0:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 8b4:	86 ff       	sbrs	r24, 6
+ 8b6:	fc cf       	rjmp	.-8      	; 0x8b0 <OLED_SetWindow+0x22>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 8b8:	80 e4       	ldi	r24, 0x40	; 64
+ 8ba:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 8be:	80 e1       	ldi	r24, 0x10	; 16
+ 8c0:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 8c4:	90 e0       	ldi	r25, 0x00	; 0
+ 8c6:	11 c0       	rjmp	.+34     	; 0x8ea <OLED_SetWindow+0x5c>
+		SPI_Write_Byte(data[i]);
+ 8c8:	e3 e0       	ldi	r30, 0x03	; 3
+ 8ca:	f0 e0       	ldi	r31, 0x00	; 0
+ 8cc:	ec 0f       	add	r30, r28
+ 8ce:	fd 1f       	adc	r31, r29
+ 8d0:	e9 0f       	add	r30, r25
+ 8d2:	f1 1d       	adc	r31, r1
+ 8d4:	80 81       	ld	r24, Z
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 8d6:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 8da:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 8de:	86 ff       	sbrs	r24, 6
+ 8e0:	fc cf       	rjmp	.-8      	; 0x8da <OLED_SetWindow+0x4c>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 8e2:	80 e4       	ldi	r24, 0x40	; 64
+ 8e4:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 8e8:	9f 5f       	subi	r25, 0xFF	; 255
+ 8ea:	92 30       	cpi	r25, 0x02	; 2
+ 8ec:	68 f3       	brcs	.-38     	; 0x8c8 <OLED_SetWindow+0x3a>
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 8ee:	e0 e2       	ldi	r30, 0x20	; 32
+ 8f0:	f4 e0       	ldi	r31, 0x04	; 4
+ 8f2:	88 e0       	ldi	r24, 0x08	; 8
+ 8f4:	85 83       	std	Z+5, r24	; 0x05
+	OLED_Send_CmdWithBytes(SSD1351_CMD_SETROW, 2, (uint8_t[]) {ys, ye});
+ 8f6:	69 83       	std	Y+1, r22	; 0x01
+ 8f8:	2a 83       	std	Y+2, r18	; 0x02
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 8fa:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 8fc:	80 e1       	ldi	r24, 0x10	; 16
+ 8fe:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 900:	85 e7       	ldi	r24, 0x75	; 117
+ 902:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 906:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 90a:	86 ff       	sbrs	r24, 6
+ 90c:	fc cf       	rjmp	.-8      	; 0x906 <OLED_SetWindow+0x78>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 90e:	80 e4       	ldi	r24, 0x40	; 64
+ 910:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 914:	80 e1       	ldi	r24, 0x10	; 16
+ 916:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 91a:	90 e0       	ldi	r25, 0x00	; 0
+ 91c:	11 c0       	rjmp	.+34     	; 0x940 <OLED_SetWindow+0xb2>
+		SPI_Write_Byte(data[i]);
+ 91e:	e1 e0       	ldi	r30, 0x01	; 1
+ 920:	f0 e0       	ldi	r31, 0x00	; 0
+ 922:	ec 0f       	add	r30, r28
+ 924:	fd 1f       	adc	r31, r29
+ 926:	e9 0f       	add	r30, r25
+ 928:	f1 1d       	adc	r31, r1
+ 92a:	80 81       	ld	r24, Z
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 92c:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 930:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 934:	86 ff       	sbrs	r24, 6
+ 936:	fc cf       	rjmp	.-8      	; 0x930 <OLED_SetWindow+0xa2>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 938:	80 e4       	ldi	r24, 0x40	; 64
+ 93a:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+{
+	OLED_CS(0);
+	OLED_DC(0);
+	SPI_Write_Byte(reg);
+	OLED_DC(1);
+	for(uint8_t i = 0; i < bytes; i++)
+ 93e:	9f 5f       	subi	r25, 0xFF	; 255
+ 940:	92 30       	cpi	r25, 0x02	; 2
+ 942:	68 f3       	brcs	.-38     	; 0x91e <OLED_SetWindow+0x90>
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 944:	88 e0       	ldi	r24, 0x08	; 8
+ 946:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+}
+ 94a:	24 96       	adiw	r28, 0x04	; 4
+ 94c:	cd bf       	out	0x3d, r28	; 61
+ 94e:	de bf       	out	0x3e, r29	; 62
+ 950:	df 91       	pop	r29
+ 952:	cf 91       	pop	r28
+ 954:	08 95       	ret
+
+00000956 <OLED_Clear>:
+
+void OLED_Clear(uint16_t color)
+{
+ 956:	cf 93       	push	r28
+ 958:	df 93       	push	r29
+ 95a:	c8 2f       	mov	r28, r24
+ 95c:	d9 2f       	mov	r29, r25
+	OLED_SetWindow(0, 0, OLED_WIDTH - 1, OLED_HEIGHT - 1);	//Okno zapisu
+ 95e:	2f e7       	ldi	r18, 0x7F	; 127
+ 960:	4f e7       	ldi	r20, 0x7F	; 127
+ 962:	60 e0       	ldi	r22, 0x00	; 0
+ 964:	80 e0       	ldi	r24, 0x00	; 0
+ 966:	0e 94 47 04 	call	0x88e	; 0x88e <OLED_SetWindow>
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 96a:	e0 e2       	ldi	r30, 0x20	; 32
+ 96c:	f4 e0       	ldi	r31, 0x04	; 4
+ 96e:	88 e0       	ldi	r24, 0x08	; 8
+ 970:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ 972:	80 e1       	ldi	r24, 0x10	; 16
+ 974:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ 976:	8c e5       	ldi	r24, 0x5C	; 92
+ 978:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 97c:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 980:	86 ff       	sbrs	r24, 6
+ 982:	fc cf       	rjmp	.-8      	; 0x97c <OLED_Clear+0x26>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 984:	80 e4       	ldi	r24, 0x40	; 64
+ 986:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ 98a:	e0 e2       	ldi	r30, 0x20	; 32
+ 98c:	f4 e0       	ldi	r31, 0x04	; 4
+ 98e:	80 e1       	ldi	r24, 0x10	; 16
+ 990:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 992:	88 e0       	ldi	r24, 0x08	; 8
+ 994:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ 996:	86 83       	std	Z+6, r24	; 0x06
+	OLED_Send_Cmd(SSD1351_CMD_WRITERAM);					//Zapis do VRAM
+	OLED_CS(0);
+	uint16_t pixno = OLED_HEIGHT * OLED_WIDTH;
+ 998:	80 e0       	ldi	r24, 0x00	; 0
+ 99a:	90 e4       	ldi	r25, 0x40	; 64
+			SPI_Write_Byte(color & 0xff);
+//			ssd2119_SendDataByte(color >> 8);
+//			ssd2119_SendDataByte(color & 0xff);
+		}
+	}*/
+	while(pixno--)
+ 99c:	0d c0       	rjmp	.+26     	; 0x9b8 <OLED_Clear+0x62>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+}
+
+__attribute__((always_inline))  static inline void OLED_SendDataByte(uint8_t data)
+{
+	while(!(OLED_USART.STATUS & USART_DREIF_bm));
+ 99e:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 9a2:	85 ff       	sbrs	r24, 5
+ 9a4:	fc cf       	rjmp	.-8      	; 0x99e <OLED_Clear+0x48>
+	OLED_USART.TXDATAL=data;
+ 9a6:	d0 93 62 08 	sts	0x0862, r29	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+}
+
+__attribute__((always_inline))  static inline void OLED_SendDataByte(uint8_t data)
+{
+	while(!(OLED_USART.STATUS & USART_DREIF_bm));
+ 9aa:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 9ae:	85 ff       	sbrs	r24, 5
+ 9b0:	fc cf       	rjmp	.-8      	; 0x9aa <OLED_Clear+0x54>
+	OLED_USART.TXDATAL=data;
+ 9b2:	c0 93 62 08 	sts	0x0862, r28	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+ 9b6:	c9 01       	movw	r24, r18
+ 9b8:	9c 01       	movw	r18, r24
+ 9ba:	21 50       	subi	r18, 0x01	; 1
+ 9bc:	31 09       	sbc	r19, r1
+ 9be:	89 2b       	or	r24, r25
+ 9c0:	71 f7       	brne	.-36     	; 0x99e <OLED_Clear+0x48>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+}
+
+__attribute__((always_inline))  static inline void OLED_SendDataByte(uint8_t data)
+{
+	while(!(OLED_USART.STATUS & USART_DREIF_bm));
+ 9c2:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 9c6:	85 ff       	sbrs	r24, 5
+ 9c8:	fc cf       	rjmp	.-8      	; 0x9c2 <OLED_Clear+0x6c>
+	OLED_USART.TXDATAL=data;
+ 9ca:	e0 e6       	ldi	r30, 0x60	; 96
+ 9cc:	f8 e0       	ldi	r31, 0x08	; 8
+ 9ce:	d2 83       	std	Z+2, r29	; 0x02
+	OLED_CS(1);
+}
+
+__attribute__((always_inline))  static inline void OLED_ClearTXCIF()
+{
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ 9d0:	80 e4       	ldi	r24, 0x40	; 64
+ 9d2:	84 83       	std	Z+4, r24	; 0x04
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+}
+
+__attribute__((always_inline))  static inline void OLED_SendDataByte(uint8_t data)
+{
+	while(!(OLED_USART.STATUS & USART_DREIF_bm));
+ 9d4:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 9d8:	85 ff       	sbrs	r24, 5
+ 9da:	fc cf       	rjmp	.-8      	; 0x9d4 <OLED_Clear+0x7e>
+	OLED_USART.TXDATAL=data;
+ 9dc:	c0 93 62 08 	sts	0x0862, r28	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+}
+
+__attribute__((always_inline))  static inline void OLED_WaitForSent()
+{
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ 9e0:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ 9e4:	86 ff       	sbrs	r24, 6
+ 9e6:	fc cf       	rjmp	.-8      	; 0x9e0 <OLED_Clear+0x8a>
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ 9e8:	88 e0       	ldi	r24, 0x08	; 8
+ 9ea:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	OLED_SendDataByte(color >> 8);
+	OLED_ClearTXCIF();
+	OLED_SendDataByte(color & 0xff);
+	OLED_WaitForSent();
+	OLED_CS(1);
+}
+ 9ee:	df 91       	pop	r29
+ 9f0:	cf 91       	pop	r28
+ 9f2:	08 95       	ret
+
+000009f4 <OLED_SetPixel>:
+
+void OLED_SetPixel(uint8_t x, uint8_t y, uint16_t color)
+{
+ 9f4:	cf 93       	push	r28
+ 9f6:	df 93       	push	r29
+ 9f8:	c4 2f       	mov	r28, r20
+ 9fa:	d5 2f       	mov	r29, r21
+	OLED_SetWindow(x, y, OLED_WIDTH - 1, OLED_HEIGHT - 1);	//Okno zapisu
+ 9fc:	2f e7       	ldi	r18, 0x7F	; 127
+ 9fe:	4f e7       	ldi	r20, 0x7F	; 127
+ a00:	0e 94 47 04 	call	0x88e	; 0x88e <OLED_SetWindow>
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ a04:	e0 e2       	ldi	r30, 0x20	; 32
+ a06:	f4 e0       	ldi	r31, 0x04	; 4
+ a08:	88 e0       	ldi	r24, 0x08	; 8
+ a0a:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ a0c:	80 e1       	ldi	r24, 0x10	; 16
+ a0e:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ a10:	8c e5       	ldi	r24, 0x5C	; 92
+ a12:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ a16:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ a1a:	86 ff       	sbrs	r24, 6
+ a1c:	fc cf       	rjmp	.-8      	; 0xa16 <OLED_SetPixel+0x22>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ a1e:	80 e4       	ldi	r24, 0x40	; 64
+ a20:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ a24:	e0 e2       	ldi	r30, 0x20	; 32
+ a26:	f4 e0       	ldi	r31, 0x04	; 4
+ a28:	80 e1       	ldi	r24, 0x10	; 16
+ a2a:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ a2c:	88 e0       	ldi	r24, 0x08	; 8
+ a2e:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ a30:	86 83       	std	Z+6, r24	; 0x06
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+}
+
+__attribute__((always_inline))  static inline void OLED_SendDataByte(uint8_t data)
+{
+	while(!(OLED_USART.STATUS & USART_DREIF_bm));
+ a32:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ a36:	85 ff       	sbrs	r24, 5
+ a38:	fc cf       	rjmp	.-8      	; 0xa32 <OLED_SetPixel+0x3e>
+	OLED_USART.TXDATAL=data;
+ a3a:	e0 e6       	ldi	r30, 0x60	; 96
+ a3c:	f8 e0       	ldi	r31, 0x08	; 8
+ a3e:	d2 83       	std	Z+2, r29	; 0x02
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ a40:	c2 83       	std	Z+2, r28	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ a42:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ a46:	86 ff       	sbrs	r24, 6
+ a48:	fc cf       	rjmp	.-8      	; 0xa42 <OLED_SetPixel+0x4e>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ a4a:	80 e4       	ldi	r24, 0x40	; 64
+ a4c:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ a50:	88 e0       	ldi	r24, 0x08	; 8
+ a52:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	OLED_Send_Cmd(SSD1351_CMD_WRITERAM);					//Zapis do VRAM
+	OLED_CS(0);
+	OLED_SendDataByte(color >> 8);
+	SPI_Write_Byte(color & 0xff);
+	OLED_CS(1);
+}
+ a56:	df 91       	pop	r29
+ a58:	cf 91       	pop	r28
+ a5a:	08 95       	ret
+
+00000a5c <OLED_SetPixel18>:
+
+void OLED_SetPixel18(uint8_t x, uint8_t y, uint32_t color)
+{
+ a5c:	cf 92       	push	r12
+ a5e:	df 92       	push	r13
+ a60:	ef 92       	push	r14
+ a62:	ff 92       	push	r15
+ a64:	69 01       	movw	r12, r18
+ a66:	7a 01       	movw	r14, r20
+	OLED_SetWindow(x, y, OLED_WIDTH - 1, OLED_HEIGHT - 1);	//Okno zapisu
+ a68:	2f e7       	ldi	r18, 0x7F	; 127
+ a6a:	4f e7       	ldi	r20, 0x7F	; 127
+ a6c:	0e 94 47 04 	call	0x88e	; 0x88e <OLED_SetWindow>
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ a70:	e0 e2       	ldi	r30, 0x20	; 32
+ a72:	f4 e0       	ldi	r31, 0x04	; 4
+ a74:	88 e0       	ldi	r24, 0x08	; 8
+ a76:	86 83       	std	Z+6, r24	; 0x06
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+ a78:	80 e1       	ldi	r24, 0x10	; 16
+ a7a:	86 83       	std	Z+6, r24	; 0x06
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ a7c:	8c e5       	ldi	r24, 0x5C	; 92
+ a7e:	80 93 62 08 	sts	0x0862, r24	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ a82:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ a86:	86 ff       	sbrs	r24, 6
+ a88:	fc cf       	rjmp	.-8      	; 0xa82 <OLED_SetPixel18+0x26>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ a8a:	80 e4       	ldi	r24, 0x40	; 64
+ a8c:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+#include <util/delay.h>
+#include <PINDefs.h>
+
+__attribute__((always_inline)) inline void OLED_DC(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_DC;
+ a90:	e0 e2       	ldi	r30, 0x20	; 32
+ a92:	f4 e0       	ldi	r31, 0x04	; 4
+ a94:	80 e1       	ldi	r24, 0x10	; 16
+ a96:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ a98:	88 e0       	ldi	r24, 0x08	; 8
+ a9a:	85 83       	std	Z+5, r24	; 0x05
+		else OLED_PORT.OUTCLR=OLEDPIN_CS;
+ a9c:	86 83       	std	Z+6, r24	; 0x06
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+}
+
+__attribute__((always_inline))  static inline void OLED_SendDataByte(uint8_t data)
+{
+	while(!(OLED_USART.STATUS & USART_DREIF_bm));
+ a9e:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ aa2:	85 ff       	sbrs	r24, 5
+ aa4:	fc cf       	rjmp	.-8      	; 0xa9e <OLED_SetPixel18+0x42>
+	OLED_USART.TXDATAL=data;
+ aa6:	c0 92 62 08 	sts	0x0862, r12	; 0x800862 <__TEXT_REGION_LENGTH__+0x7f4862>
+	OLED_Send_Cmd(SSD1351_CMD_WRITERAM);					//Zapis do VRAM
+	OLED_CS(0);
+	OLED_SendDataByte(color & 0xff);
+	OLED_SendDataByte((color >> 8) & 0xff);
+ aaa:	77 27       	eor	r23, r23
+ aac:	6f 2d       	mov	r22, r15
+ aae:	5e 2d       	mov	r21, r14
+ ab0:	4d 2d       	mov	r20, r13
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+}
+
+__attribute__((always_inline))  static inline void OLED_SendDataByte(uint8_t data)
+{
+	while(!(OLED_USART.STATUS & USART_DREIF_bm));
+ ab2:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ ab6:	85 ff       	sbrs	r24, 5
+ ab8:	fc cf       	rjmp	.-8      	; 0xab2 <OLED_SetPixel18+0x56>
+	OLED_USART.TXDATAL=data;
+ aba:	e0 e6       	ldi	r30, 0x60	; 96
+ abc:	f8 e0       	ldi	r31, 0x08	; 8
+ abe:	42 83       	std	Z+2, r20	; 0x02
+	SPI_Write_Byte((color >> 16) & 0xff);
+ ac0:	67 01       	movw	r12, r14
+ ac2:	ee 24       	eor	r14, r14
+ ac4:	ff 24       	eor	r15, r15
+	_delay_us(2);               //Sygna³ reset musi trwaæ >=2 us
+}
+
+__attribute__((always_inline)) inline void SPI_Write_Byte(uint8_t byte)
+{
+	OLED_USART.TXDATAL=byte;
+ ac6:	c2 82       	std	Z+2, r12	; 0x02
+	while(!(OLED_USART.STATUS & USART_TXCIF_bm));
+ ac8:	80 91 64 08 	lds	r24, 0x0864	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+ acc:	86 ff       	sbrs	r24, 6
+ ace:	fc cf       	rjmp	.-8      	; 0xac8 <OLED_SetPixel18+0x6c>
+	OLED_USART.STATUS=USART_TXCIF_bm;
+ ad0:	80 e4       	ldi	r24, 0x40	; 64
+ ad2:	80 93 64 08 	sts	0x0864, r24	; 0x800864 <__TEXT_REGION_LENGTH__+0x7f4864>
+		else OLED_PORT.OUTCLR=OLEDPIN_DC;
+}
+
+__attribute__((always_inline)) inline void OLED_CS(_Bool state)
+{
+	if(state) OLED_PORT.OUTSET=OLEDPIN_CS;
+ ad6:	88 e0       	ldi	r24, 0x08	; 8
+ ad8:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__TEXT_REGION_LENGTH__+0x7f4425>
+	OLED_CS(1);
+}
+ adc:	ff 90       	pop	r15
+ ade:	ef 90       	pop	r14
+ ae0:	df 90       	pop	r13
+ ae2:	cf 90       	pop	r12
+ ae4:	08 95       	ret
+
+00000ae6 <_exit>:
+ ae6:	f8 94       	cli
+
+00000ae8 <__stop_program>:
+ ae8:	ff cf       	rjmp	.-2      	; 0xae8 <__stop_program>
